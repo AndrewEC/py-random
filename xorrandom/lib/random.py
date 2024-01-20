@@ -37,9 +37,13 @@ class Xor128Prng:
 
         The upper bound can be specified on its own.
 
-        :param lower: The minimum value the number can be (inclusive). If the value of this argument is not
+        If neither the upper or lower bound have been specified then this will generate a number between 0 and the
+        max value an integer on the given system can store.
+
+        :param lower: The minimum value the generated number can be (inclusive). If the value of this argument is not
             None then it must the upper argument must also be provided with a value that is not None.
-        :param upper: The maximum value the number can be (exclusive). This can be specified without the lower bound.
+        :param upper: The maximum value the generated number can be (exclusive). This can be specified without the lower
+            bound.
         :return: A random number with a value between the lower and upper limits
         """
 
