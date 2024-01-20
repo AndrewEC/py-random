@@ -9,4 +9,6 @@ if (Test-Path $EnvFolder) {
         && pip install -r requirements.txt `
 
     cd ./py-build-utils && python setup.py install && cd ..
+
+    python setup.py install
 }
