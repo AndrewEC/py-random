@@ -1,0 +1,10 @@
+__pycache__
+build
+dist
+py-random-venv
+xorrandom.egg-info
+.idea
+.coverage
+htmlcov
+.mutmut-cache
+html
