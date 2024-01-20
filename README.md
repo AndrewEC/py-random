@@ -9,7 +9,8 @@ To clone the repository and all submodules using the Git CLI:
 > git clone --recurse-submodules https://github.com/AndrewEC/py-random.git
 
 ### Playground
-First run the powershell script CreateVenv.ps1 from the root of this project then run the run.py script: python run.py --help.
+First run the powershell script CreateVenv.ps1 from the root of this project then run the run.py script:
+> python run.py --help.
 
 ### Quality Metrics
 To run the unit and integration tests simply run the CreateVenv.ps1 script the run the build script via: python build.py
