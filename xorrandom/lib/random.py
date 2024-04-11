@@ -18,19 +18,17 @@ class Xor128Prng:
         """
 
         if seed is None:
-            raise ValueError('seed argument cannot be None.')
+            raise ValueError('\'seed\' argument cannot be None.')
         elif seed == 0:
-            raise ValueError('seed argument cannot be zero.')
+            raise ValueError('\'seed\' argument cannot be zero.')
 
-        self._s = [0, 0]
-        self._s[0] = seed
-        self._s[1] = seed
+        self._s = [seed, seed]
         for i in range(seed):
             self.next()
 
     def next(self, upper: int | None = None, lower: int | None = None) -> int:
         """
-        Generate a pseudo-random number greater than or equal to the lower bound and less than, not equal to,
+        Generates a pseudo-random number greater than or equal to the lower bound and less than, not equal to,
         the upper bound.
 
         If the lower bound has been specified then the upper bound must also be specified.

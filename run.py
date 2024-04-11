@@ -1,3 +1,5 @@
+import sys
+
 import click
 
 from xorrandom import Xor128Prng
@@ -12,6 +14,7 @@ def generate(seed: int, number_of_numbers: int, maximum: int, minimum: int):
     if number_of_numbers <= 0:
         raise ValueError('The number-of-numbers must be value greater than 0')
 
+    sys.set_int_max_str_digits(100_000)
     generator = Xor128Prng(seed)
     for i in range(number_of_numbers):
         print(generator.next(maximum, minimum))

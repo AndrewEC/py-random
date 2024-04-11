@@ -12,11 +12,11 @@ class Xor128PrngTests(TestCase):
     def test_initialize_generator_with_invalid_seed_raises_exception(self):
         with self.assertRaises(ValueError) as context1:
             Xor128Prng(None)
-        self.assertEqual('seed argument cannot be None.', str(context1.exception))
+        self.assertEqual('\'seed\' argument cannot be None.', str(context1.exception))
 
         with self.assertRaises(ValueError) as context2:
             Xor128Prng(0)
-        self.assertEqual('seed argument cannot be zero.', str(context2.exception))
+        self.assertEqual('\'seed\' argument cannot be zero.', str(context2.exception))
 
     def test_generate_number_with_invalid_bounds(self):
         generator = Xor128Prng(1)
